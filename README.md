@@ -168,14 +168,6 @@ streamlit run app/app.py
 
 ---
 
-##  Author
-
-**Manrojpreet**
-
-Medical appointment no show prediction Project
-
-Developed using Python, Scikit-learn, and Streamlit.
-
 ## Application Screenshots
 
 ### Home Page
@@ -189,3 +181,11 @@ Developed using Python, Scikit-learn, and Streamlit.
 
 ### Feature Importance
 ![Feature Importance](./assets/feature_importance.png)
+
+##  Author
+
+**Manrojpreet**
+
+Medical appointment no show prediction Project
+
+Developed using Python, Scikit-learn, and Streamlit.
