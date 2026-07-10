@@ -1,12 +1,20 @@
 #  Medical Appointment No-Show Prediction
 
 
+[![Live App](https://img.shields.io/badge/Live%20Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://medical-appointment-noshow-prediction.streamlit.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-181717?logo=github&logoColor=white)](https://github.com/Manrojsarang/medical-appointment-noshow-prediction)
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red?logo=streamlit)
 ![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-blue?logo=pandas)
 ![NumPy](https://img.shields.io/badge/NumPy-Numerical_Computing-blue?logo=numpy)
 ![License](https://img.shields.io/badge/License-MIT-green)
+ 
+A machine learning web application that predicts whether a patient is likely to miss a scheduled medical appointment using a tuned Random Forest classifier.
+
+**Live Demo:** https://medical-appointment-noshow-prediction.streamlit.app/
+
+**GitHub Repository:** https://github.com/Manrojsarang/medical-appointment-noshow-prediction
 
 ##  Table of Contents
 
