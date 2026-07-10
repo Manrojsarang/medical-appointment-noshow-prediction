@@ -1,4 +1,27 @@
 #  Medical Appointment No-Show Prediction
+#  Medical Appointment No-Show Prediction
+
+![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
+![Streamlit](https://img.shields.io/badge/Streamlit-Web_App-red?logo=streamlit)
+![Pandas](https://img.shields.io/badge/Pandas-Data_Analysis-blue?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical_Computing-blue?logo=numpy)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+##  Table of Contents
+
+- Project Overview
+- Problem Statement
+- Dataset
+- Technologies Used
+- Machine Learning Workflow
+- Model Performance
+- Project Structure
+- Application Screenshots
+- Installation
+- Future Improvements
+- Author
+
 
 ##  Project Overview
 
@@ -21,11 +44,15 @@ The objective of this project is to predict whether a patient will attend or mis
 
 ---
 
-## Dataset
+##  Dataset
 
-1. **Dataset: **Medical Appointment No-Show Dataset
-2. Total Records: 110,527
-3. Type: Binary Classification
+The project uses the **Medical Appointment No-Show Dataset**, which contains appointment records collected from public healthcare facilities.
+
+| Attribute       | Details                                            |
+| --------------- | -------------------------------------------------- |
+| Dataset Size    | **110,527** patient appointment records            |
+| Problem Type    | Binary Classification                              |
+| Target Variable | **No-Show** (0 = Attended, 1 = Missed Appointment) |
 
 ### Features Used
 
@@ -42,39 +69,76 @@ The objective of this project is to predict whether a patient will attend or mis
 * Appointment Weekday
 * Neighbourhood
 
+The objective is to predict whether a patient is likely to **attend** or **miss** a scheduled medical appointment based on these features.
+
+
 **Target Variable**
 
 * No-Show (Attend / Miss Appointment)
 
 ---
 
-## Project Workflow
+##  Machine Learning Workflow
+
+The project follows a complete end-to-end Machine Learning pipeline:
 
 1. Data Collection
-2. Exploratory Data Analysis (EDA)
+2. Data Understanding
 3. Data Cleaning
-4. Feature Engineering
-5. Data Preprocessing
-6. Model Training
-7. Hyperparameter Tuning
-8. Model Evaluation
-9. Feature Importance Analysis
-10. Model Serialization using Joblib
-11. Streamlit Deployment
+4. Exploratory Data Analysis (EDA)
+5. Feature Engineering
+6. Data Preprocessing
+7. Model Training
+8. Hyperparameter Tuning using **GridSearchCV**
+9. Model Evaluation
+10. Feature Importance Analysis
+11. Model Serialization using **Joblib**
+12. Streamlit Web Application Development
+13. Version Control using Git & GitHub
 
 ---
+##  Model Performance
+
+The final model selected for deployment is a **Random Forest Classifier** optimized using **GridSearchCV**.
+
+### Evaluation Metrics
+
+| Metric   |      Value |
+| -------- | ---------: |
+| Accuracy | **79.74%** |
+
+### Why Random Forest?
+
+* Handles both numerical and categorical features effectively.
+* Reduces overfitting through ensemble learning.
+* Provides feature importance scores for model interpretability.
+* Delivers robust performance on structured tabular datasets.
+
+### Most Important Features
+
+The trained model identified the following features as the most influential:
+
+1. Waiting Days
+2. SMS Received
+3. Age
+4. Scheduled Hour
+5. Hypertension
+
+Feature importance is also visualized in the Streamlit application.
+
 
 ##  Technologies Used
 
-* Python
-* Pandas
-* NumPy
-* Scikit-learn
-* Seaborn
-* Plotly
-* Streamlit
-* Joblib
-* JupyterLab
+| Category | Technologies |
+|----------|--------------|
+| Programming Language | Python |
+| Data Analysis | Pandas, NumPy |
+| Visualization | Seaborn, Plotly |
+| Machine Learning | Scikit-learn |
+| Model | Random Forest Classifier |
+| Web Framework | Streamlit |
+| Development | JupyterLab, VS Code |
+| Version Control | Git, GitHub |
 
 ---
 
@@ -116,7 +180,7 @@ The application allows users to:
 medical-appointment-noshow-prediction/
 │
 ├── app/
-│   └── app.py
+│   └── app.py                     # Streamlit web application
 │
 ├── assets/
 │   ├── home.png
@@ -147,36 +211,53 @@ medical-appointment-noshow-prediction/
 │
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── LICENSE
 ```
+
+
 
 ---
 
-##  How to Run
+##  Installation & Usage
 
-1. Clone the repository.
+### 1. Clone the repository
 
-2. Install dependencies.
+```bash
+git clone https://github.com/Manrojsarang/medical-appointment-noshow-prediction.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd medical-appointment-noshow-prediction
+```
+
+### 3. Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Start the Streamlit application.
+### 4. Run the Streamlit application
 
 ```bash
 streamlit run app/app.py
 ```
 
+The application will open automatically in your default web browser.
+
 ---
 
-## Future Improvements
+## 🚀 Future Improvements
 
 * Improve recall for minority class predictions.
-* Experiment with XGBoost and LightGBM.
-* Build a REST API using FastAPI.
-* Deploy the application to the cloud.
-* Add patient authentication and database integration.
+* Compare performance with **XGBoost**, **LightGBM**, and **CatBoost**.
+* Build a REST API using **FastAPI**.
+* Deploy the application on a cloud platform.
+* Add model monitoring and logging.
+* Integrate a database for storing appointment records.
+* Implement automated retraining with new data.
 
 ---
 
@@ -198,6 +279,4 @@ streamlit run app/app.py
 
 **Manrojpreet**
 
-Medical appointment no show prediction Project
-
-Developed using Python, Scikit-learn, and Streamlit.
+This project was developed as an end-to-end Machine Learning solution for predicting medical appointment no-shows using a tuned Random Forest Classifier. It demonstrates the complete ML workflow, from data preprocessing and exploratory data analysis to model training, evaluation, deployment with Streamlit, and version control using Git and GitHub.
