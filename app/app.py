@@ -11,9 +11,13 @@ st.set_page_config(
 )
 
 # ---------- Load Model ----------
-model = joblib.load("../models/medical_no_show_model.pkl")
-feature_columns = joblib.load("../models/feature_columns.pkl")
-feature_importance = pd.read_csv("../models/feature_importance.csv")
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+model = joblib.load(os.path.join(BASE_DIR, "models", "medical_no_show_model.pkl"))
+feature_columns = joblib.load(os.path.join(BASE_DIR, "models", "feature_columns.pkl"))
+feature_importance = pd.read_csv(os.path.join(BASE_DIR, "models", "feature_importance.csv"))
 
 
 # ---------- Sidebar ----------
