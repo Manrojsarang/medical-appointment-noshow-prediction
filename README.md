@@ -113,7 +113,7 @@ The application allows users to:
 ##  Project Structure
 
 ```text
-medical-appointment-noshow/
+medical-appointment-noshow-prediction/
 │
 ├── app/
 │   └── app.py
@@ -125,6 +125,10 @@ medical-appointment-noshow/
 │   └── feature_importance.png
 │
 ├── data/
+│   ├── raw/
+│   │   └── dataset.csv
+│   └── processed/
+│       └── cleaned_medical_appointments.csv
 │
 ├── models/
 │   ├── medical_no_show_model.pkl
@@ -132,10 +136,18 @@ medical-appointment-noshow/
 │   └── feature_importance.csv
 │
 ├── notebooks/
+│   ├── 1.data_understanding.ipynb
+│   ├── 2.data_cleaning_preprocessing.ipynb
+│   ├── 3.EDA.ipynb
+│   ├── 4.Model_Training.ipynb
+│   └── 5.Prediction.ipynb
+│
+├── src/
+│   └── preprocessing.py
 │
 ├── requirements.txt
 ├── README.md
-├── .gitignore
+└── .gitignore
 ```
 
 ---
