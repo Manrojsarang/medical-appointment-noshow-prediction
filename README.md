@@ -118,6 +118,12 @@ medical-appointment-noshow/
 ├── app/
 │   └── app.py
 │
+├── assets/
+│   ├── home.png
+│   ├── attend_prediction.png
+│   ├── no_show_prediction.png
+│   └── feature_importance.png
+│
 ├── data/
 │
 ├── models/
@@ -128,8 +134,8 @@ medical-appointment-noshow/
 ├── notebooks/
 │
 ├── requirements.txt
-└── README.md
-
+├── README.md
+├── .gitignore
 ```
 
 ---
@@ -173,23 +179,13 @@ Developed using Python, Scikit-learn, and Streamlit.
 ## Application Screenshots
 
 ### Home Page
-
-![Home](assets/screenshot(62).png)
-
----
+![Home](https://raw.githubusercontent.com/Manrojsarang/medical-appointment-noshow-prediction/main/assets/home.png)
 
 ### Attend Prediction
-
-![Attend Prediction](assets/screenshot(68).png)
-
----
+![Attend Prediction](./assets/attend_prediction.png)
 
 ### No-Show Prediction
-
-![No Show Prediction](assets/screenshot(65).png)
-
----
+![No-Show Prediction](./assets/no_show_prediction.png)
 
 ### Feature Importance
-
-![Feature Importance](assets/screenshot(66).png)
+![Feature Importance](./assets/feature_importance.png)
