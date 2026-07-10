@@ -1,5 +1,5 @@
 #  Medical Appointment No-Show Prediction
-#  Medical Appointment No-Show Prediction
+
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue?logo=python)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?logo=scikitlearn)
