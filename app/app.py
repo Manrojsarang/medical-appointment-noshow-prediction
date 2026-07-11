@@ -3,14 +3,14 @@ import streamlit as st
 import joblib
 import pandas as pd
 
-# ---------- Page Config ----------
+#  Page Config
 st.set_page_config(
     page_title="Medical Appointment Predictor",
     page_icon="🏥",
     layout="centered"
 )
 
-# ---------- Load Model ----------
+#  Load Model 
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,7 +20,7 @@ feature_columns = joblib.load(os.path.join(BASE_DIR, "models", "feature_columns.
 feature_importance = pd.read_csv(os.path.join(BASE_DIR, "models", "feature_importance.csv"))
 
 
-# ---------- Sidebar ----------
+#  Sidebar 
 
 st.sidebar.title(" Medical Appointment Predictor")
 
@@ -70,11 +70,11 @@ st.sidebar.plotly_chart(
     use_container_width=True
 )
 
-# ---------- Main Page ----------
+#  Main Page 
 st.title(" Medical Appointment No-Show Prediction")
 st.info("Fill in the patient's information below and click Predict.")
 
-# ---------- Inputs ----------
+#  Inputs 
 st.subheader(" Patient Information")
 col1, col2 = st.columns(2)
 
@@ -162,14 +162,14 @@ neighbourhood = st.selectbox(
 
 st.write("---")
 
-# ---------- Predict Button ----------
+#  Predict Button 
 
 left, center, right = st.columns([1, 2, 1])
 
 with center:
     predict = st.button("🔍 Predict", use_container_width=True)
 
-# ---------- Prediction ----------
+#  Prediction 
 
 if predict:
 
@@ -293,7 +293,7 @@ if predict:
         feature_importance.head(10),
         use_container_width=True
     )
- # ---------- footer ----------
+ #  footer 
 st.markdown("---")
 
 st.caption(
