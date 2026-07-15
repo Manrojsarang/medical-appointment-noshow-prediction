@@ -33,7 +33,7 @@ st.sidebar.subheader(" Dataset")
 st.sidebar.info("110,527 Medical Appointments")
 
 st.sidebar.subheader(" Model Accuracy")
-st.sidebar.metric("Accuracy", "79.74%")
+st.sidebar.metric("Accuracy", "80.4%")
 
 st.sidebar.subheader(" Purpose")
 st.sidebar.write(
